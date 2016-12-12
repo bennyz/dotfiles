@@ -84,6 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
+alias view="nvim -R"
+alias vimdiff="nvim -d"
+
+alias ff24="~/Downloads/firefox/firefox"
 
 export SUDO_EDITOR=nvim
 export PREFIX=~/Development/engine

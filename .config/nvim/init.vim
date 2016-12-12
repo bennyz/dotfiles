@@ -38,4 +38,29 @@ endif
 
 "End dein Scripts-------------------------
 
+" nirs config
+set encoding=utf-8
+set cindent
+set nocompatible
+set backspace=indent,eol,start
+set incsearch
+set hlsearch
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set listchars=tab:»\
+set number
+
+" Status line
+set laststatus=2
+set statusline=%<%f\ %y%m%r%=%-14.(%l,%c%V%)\ %P
+
+" Highlight traling whitespace
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
