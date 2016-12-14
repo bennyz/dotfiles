@@ -51,7 +51,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dnf fedora sudo mvn)
+plugins=(git dnf fedora sudo mvn k)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,11 +83,22 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# misc
+alias k="k -h"
+
+export VISUAL=vim
+export EDITOR=$VISUAL
+export SUDO_EDITOR=nvim
+export PREFIX=~/Development/engine
+
+# vim
 alias vim=nvim
 alias view="nvim -R"
 alias vimdiff="nvim -d"
 
+# oVirt
 alias ff24="~/Downloads/firefox/firefox"
+alias engine-debug="${PREFIX}/share/ovirt-engine/services/ovirt-engine/ovirt-engine.py start | lnav"
 
-export SUDO_EDITOR=nvim
-export PREFIX=~/Development/engine
+[[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"

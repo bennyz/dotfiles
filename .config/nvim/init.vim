@@ -20,6 +20,7 @@ call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('scrooloose/nerdtree')
+call dein#add('junegunn/fzf')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -50,12 +51,15 @@ set shiftwidth=4
 set expandtab
 set listchars=tab:»\
 set number
+set spelllang=en
+setlocal spell spelllang=en_us
+set spellfile=~/.config/nvim/spell/en.utf-8.add
 
 " Status line
 set laststatus=2
 set statusline=%<%f\ %y%m%r%=%-14.(%l,%c%V%)\ %P
 
-" Highlight traling whitespace
+" Highlight trailing whitespace
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
