@@ -51,9 +51,10 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dnf fedora sudo mvn k)
+plugins=(git dnf fedora sudo mvn k compleat pip python systemd)
 
 source $ZSH/oh-my-zsh.sh
+COMPLETION_WAITING_DOTS="true"
 
 # User configuration
 
