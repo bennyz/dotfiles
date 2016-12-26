@@ -69,5 +69,5 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Python
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python' sheelescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
